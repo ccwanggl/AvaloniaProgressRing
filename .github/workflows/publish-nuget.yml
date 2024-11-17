@@ -15,14 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         
-      - name: Setup dotnet 5-8
-        uses: actions/setup-dotnet@v4.0.1
+      - name: Setup dotnet 5-9
+        uses: actions/setup-dotnet@v4.1.0
         with:
           dotnet-version: | 
             5.0.x
             6.0.x
             7.0.x
             8.0.x
+            9.0.x
 
       - name: build AvaloniaProgressRing in Release on each OS as a smoke test (inc. PR's)
         run: dotnet build ${{ github.workspace }}/AvaloniaProgressRing/AvaloniaProgressRing.csproj --configuration Release
@@ -35,14 +36,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         
-      - name: Setup dotnet 5-8
-        uses: actions/setup-dotnet@v4.0.1
+      - name: Setup dotnet 5-9
+        uses: actions/setup-dotnet@v4.1.0
         with:
           dotnet-version: | 
             5.0.x
             6.0.x
             7.0.x
             8.0.x
+            9.0.x
 
       # Required for a specific dotnet version that doesn't come with ubuntu-latest / windows-latest
       # Visit bit.ly/2synnZl to see the list of SDKs that are pre-installed with ubuntu-latest / windows-latest
